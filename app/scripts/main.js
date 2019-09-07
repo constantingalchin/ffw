@@ -25,3 +25,13 @@ function selectBuyFonts() {
   tab[1].classList.add('tab--active');
   tab[0].classList.remove('tab--active');
 }
+
+function parseUrl(url) {
+  return new URL(url);
+}
+
+parsedUrl = parseUrl('http://ffwagency.com/do/any.php?a=1#foo');
+
+console.log(parsedUrl.hash);
+console.log(parsedUrl.hostname);
+console.log(parsedUrl.pathname);
