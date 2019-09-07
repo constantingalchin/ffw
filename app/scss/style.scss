@@ -29,6 +29,7 @@ body {
 
     .tab {
       cursor: pointer;
+      user-select: none;
 
       &--active {
         color: #808080;
@@ -44,9 +45,16 @@ body {
 .container {
   @extend .metrics;
   justify-content: center;
+  align-items: center;
   border: 3px solid #d3d3d3;
   border-radius: 7px;
   padding: 24px;
+
+  #myFonts {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
 
   .card {
     display: flex;
@@ -55,9 +63,7 @@ body {
     input[type="radio"] {
       height: 0px;
       width: 0px;
-      &:checked ~ .view,
-      &:checked ~ .description,
-      &:checked ~ .card__element {
+      &:checked ~ * {
         opacity: 0.5;
       }
     }
@@ -118,7 +124,7 @@ body {
       align-items: center;
 
       &--big {
-        padding-right: 60px;
+        width: 200px;
       }
 
       ul {
@@ -166,6 +172,11 @@ body {
     margin-top: 16px;
     padding: 0;
 
+    &__title {
+      margin: 0 10px;
+      text-align: center;
+    }
+
     &__tabs {
       margin-top: 20px;
     }
@@ -176,6 +187,10 @@ body {
     border-left-width: 0;
     border-right-width: 0;
     border-radius: 0;
+
+    #myFonts {
+      flex-direction: column;
+    }
 
     .card {
       margin: 20px 0;
@@ -216,6 +231,12 @@ body {
             margin: 0;
           }
         }
+      }
+    }
+    #buyFonts {
+      p {
+        margin: 15px;
+        text-align: center;
       }
     }
   }

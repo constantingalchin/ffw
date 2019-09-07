@@ -1,65 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Select Fonts</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="scripts/main.js"></script>
 </head>
-<body>
+
+<body onload="init()">
     <div class="header">
         <div class="header__title">
             Please select one font
         </div>
         <div class="header__tabs">
-            <div class="tab tab--active">
+            <div class="tab tab--active" onclick="changeTab('myFontsTab')">
                 My fonts
             </div>
-            <div class="tab">
+            <div class="tab" onclick="changeTab('buyFontsTab')">
                 Buy fonts
             </div>
         </div>
     </div>
     <div class="container">
-        <label class="card card--big" for="card1">
-            <input type="radio" name="card" id="card1" />
-            <div class="card__element">
-                <div class="view view--merriweather">
-                    M
+        <div id="myFonts">
+            <label class="card card--big" for="card1">
+                <input type="radio" name="card" id="card1" />
+                <div class="card__element">
+                    <div class="view view--merriweather">
+                        M
+                    </div>
+                    <div class="description description--big">
+                        <ul>
+                            <li>Merriweather project is led by Sorkin Type</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="description description--big">
-                    <ul>
-                        <li>Merriweather project is led by Sorkin Type</li>
-                    </ul>
-                </div>
+            </label>
+            <div class="aside">
+                <label class="card" for="card2">
+                    <input type="radio" name="card" id="card2" />
+                    <div class="view view--roboto">
+                        R
+                    </div>
+                    <div class="description">
+                        <ul>
+                            <li>Roboto doesn't compromise, allowing letters</li>
+                        </ul>
+                    </div>
+                </label>
+                <label class="card" for="card3">
+                    <input type="radio" name="card" id="card3" />
+                    <div class="view view--notosans">
+                        NS
+                    </div>
+                    <div class="description">
+                        <ul>
+                            <li>Noto Sans covers over 30 scripts</li>
+                        </ul>
+                    </div>
+                </label>
             </div>
-        </label>
-        <div class="aside">
-            <label class="card" for="card2">
-                <input type="radio" name="card" id="card2" />
-                <div class="view view--roboto">
-                    R
-                </div>
-                <div class="description">
-                    <ul>
-                        <li>Roboto doesn't compromise, allowing letters</li>
-                    </ul>
-                </div>
-            </label>
-            <label class="card" for="card3">
-                <input type="radio" name="card" id="card3" />
-                <div class="view view--notosans">
-                    NS
-                </div>
-                <div class="description">
-                    <ul>
-                        <li>Noto Sans covers over 30 scripts</li>
-                    </ul>
-                </div>
-            </label>
+        </div>
+        <div id="buyFonts">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, ratione.
+            </p>
         </div>
     </div>
 </body>
+<script src="scripts/main.js"></script>
 </html>

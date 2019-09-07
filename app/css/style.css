@@ -23,7 +23,8 @@ body {
     font-weight: 500;
     color: #ff2111; }
     .header__tabs .tab {
-      cursor: pointer; }
+      cursor: pointer;
+      user-select: none; }
       .header__tabs .tab--active {
         color: #808080;
         opacity: 0.5; }
@@ -32,18 +33,21 @@ body {
 
 .container {
   justify-content: center;
+  align-items: center;
   border: 3px solid #d3d3d3;
   border-radius: 7px;
   padding: 24px; }
+  .container #myFonts {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; }
   .container .card {
     display: flex;
     width: 100%; }
     .container .card input[type="radio"] {
       height: 0px;
       width: 0px; }
-      .container .card input[type="radio"]:checked ~ .view,
-      .container .card input[type="radio"]:checked ~ .description,
-      .container .card input[type="radio"]:checked ~ .card__element {
+      .container .card input[type="radio"]:checked ~ * {
         opacity: 0.5; }
     .container .card__element {
       display: flex;
@@ -88,7 +92,7 @@ body {
       display: flex;
       align-items: center; }
       .container .card .description--big {
-        padding-right: 60px; }
+        width: 200px; }
       .container .card .description ul {
         padding: 0 20px;
         line-height: 1.3; }
@@ -118,6 +122,9 @@ body {
     align-items: center;
     margin-top: 16px;
     padding: 0; }
+    .header__title {
+      margin: 0 10px;
+      text-align: center; }
     .header__tabs {
       margin-top: 20px; }
   .container {
@@ -126,6 +133,8 @@ body {
     border-left-width: 0;
     border-right-width: 0;
     border-radius: 0; }
+    .container #myFonts {
+      flex-direction: column; }
     .container .card {
       margin: 20px 0;
       justify-content: space-around;
@@ -151,4 +160,7 @@ body {
         padding: 0;
         margin-left: 20px; }
         .container .card .description--big ul {
-          margin: 0; } }
+          margin: 0; }
+    .container #buyFonts p {
+      margin: 15px;
+      text-align: center; } }
