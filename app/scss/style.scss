@@ -13,7 +13,7 @@ body {
   justify-content: space-between;
   min-width: 400px;
   padding: 0 8px;
-  margin-bottom: 16px;
+  margin: 16px 0;
   align-items: flex-end;
 
   &__title {
@@ -169,7 +169,6 @@ body {
     min-width: unset;
     flex-direction: column;
     align-items: center;
-    margin-top: 16px;
     padding: 0;
 
     &__title {
